@@ -52,7 +52,7 @@
                 "live": "{data.isLive} ? true : false",
                 "pluginVersion": "6.5.13-AVPlayer-iOS",
                 "title": "{data.contentVideoTitle}",
-                "mediaDuration": "{context.inbuilt.duration}",
+                "mediaDuration": "{data.mediaDuration}",
                 "player": "{data.playerName}",
                 "playerVersion": "{data.playerVersion}",
                 "resource": "{data.resolvedContentURLString}",
@@ -121,30 +121,30 @@
                 "player": "{data.playerName}"
             },
             "adManifest" : {
-                "givenBreaks": "{data.adModel.totalAdsInPod}",
-                "expectedBreaks": "{data.adModel.totalAdsInPod}"
+                "givenBreaks": "{data.totalAdsInPod}",
+                "expectedBreaks": "{data.totalAdsInPod}"
             },
             "adBreakStart": {
-                "breakNumber": "{data.adModel.adPositionInPod}",
-                "title": "{data.contentVideoTitle}",
-                "givenAds": "{data.adModel.totalAdsInPod}",
-                "expectedAds": "{data.adModel.totalAdsInPod}"
+                "breakNumber": "{data.adPodPosition}",
+                "title": "{data.adTitle}",
+                "givenAds": "{data.totalAdsInPod}",
+                "expectedAds": "{data.totalAdsInPod}"
             },
             "adBreakStop": {
-                "breakNumber": "{data.adModel.adPositionInPod}"
+                "breakNumber": "{data.adPodPosition}"
             },
             "adStart": {
-                "adNumber": "{data.adModel.adPositionInPod}",
-                "adResource": "{data.adModel.adURLString}",
+                "adNumber": "{data.adPositionInPod}",
+                "adResource": "{data.adURLString}",
                 "adCampaign": "{context.adCampaign}",
                 "audio": "{context.audio}",
                 "fullscreen": "{context.isFullscreen}",
-                "breakNumber": "{data.adModel.adPositionInPod}",
+                "breakNumber": "{data.adPodPosition}",
                 "title": "{data.contentVideoTitle}",
-                "adTitle": "{data.adModel.adTitle}",
-                "skippable": "{data.adModel.adIsSkippable}",
-                "adCreativeId": "{data.adModel.adCreativeId}",
-                "adProvider": "{data.adModel.adSystem}",
+                "adTitle": "{data.adTitle}",
+                "skippable": "{data.adIsSkippable}",
+                "adCreativeId": "{data.adCreativeId}",
+                "adProvider": "{data.adSystem}",
                 "param1": "{context.param1}",
                 "param2": "{context.param2}",
                 "param3": "{context.param3}",
@@ -178,41 +178,41 @@
                 "param19": "{context.screenSize}"
             },
             "bufferEvent": {
-                "adNumber": "{data.adModel.adPositionInPod}"
+                "adNumber": "{data.adPositionInPod}"
             },
             "adBufferEvent": {
-                "adNumber": "{data.adModel.adPositionInPod}"
+                "adNumber": "{data.adPositionInPod}"
             },
             "adJoin": {
-                "adNumber": "{data.adModel.adPositionInPod}"
+                "adNumber": "{data.adPositionInPod}"
             },
             "adQuartile": {
-                "breakNumber": "{data.adModel.adPositionInPod}",
-                "adNumber": "{data.adModel.adPositionInPod}"
+                "breakNumber": "{data.adPodPosition}",
+                "adNumber": "{data.adPositionInPod}"
             },
             "adPause": {
-                "breakNumber": "{data.adModel.adPositionInPod}",
-                "adNumber": "{data.adModel.adPositionInPod}"
+                "breakNumber": "{data.adPodPosition}",
+                "adNumber": "{data.adPositionInPod}"
             },
             "adResume": {
-                "breakNumber": "{data.adModel.adPositionInPod}",
-                "adNumber": "{data.adModel.adPositionInPod}"
+                "breakNumber": "{data.adPodPosition}",
+                "adNumber": "{data.adPositionInPod}"
             },
             "adBuffer": {
             },
             "adClick": {
-                "breakNumber": "{data.adModel.adPositionInPod}",
-                "adNumber": "{data.adModel.adPositionInPod}",
-                "adUrl": "{data.adModel.adURLString}"
+                "breakNumber": "{data.adPodPosition}",
+                "adNumber": "{data.adPositionInPod}",
+                "adUrl": "{data.adURLString}"
             },
             "adStop": {
-                "breakNumber": "{data.adModel.adPositionInPod}",
-                "adNumber": "{data.adModel.adPositionInPod}",
-                "skipped": "{data.adModel.adSkipped}"
+                "breakNumber": "{data.adPodPosition}",
+                "adNumber": "{data.adPositionInPod}",
+                "skipped": "{data.adSkipped}"
             },
             "adError": {
                 "position": "{data.adBreakTypeKey}",
-                "adNumber": "{data.adNum}",
+                "adNumber": "{data.adPositionInPod}",
                 "errorCode": "{data.errorCode}",
                 "player": "{data.playerName}",
                 "msg": "{data.errorMessage}",
