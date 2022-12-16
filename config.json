@@ -1,0 +1,231 @@
+{
+    "Youbora": {
+        "enabled": true,
+        "params": {
+            "serverInfo": {
+                "authUrl": "https://a-fds.youborafds01.com/data",
+                "videoPath": "/infinity/video/",
+                "sessionPath": "/infinity/session/",
+                "eventPath": "/infinity/event",
+                "authResponseKey": "q",
+                "sessionRootKey": "c",
+                "domainKey": "h",
+                "pingKey": "pt",
+                "sessionInterval": "45"
+            },
+            "accountInfo": {
+                "accountCode": "plutotvdev"
+            },
+            "authInfo": {
+                "pluginVersion": "6.5.13-AVPlayer-iOS",
+                "outputformat": "json"
+            },
+            "session_start": {
+                "username": "{context.username}",
+                "deviceUUID": "{context.deviceUUID}",
+                "dimensions": "{context.dimensions}",
+                "route": "{context.route}",
+                "page": "{context.page}",
+                "referral": "{context.referral}",
+                "url": "{context.url}",
+                "language": "{context.language}",
+                "deviceInfo": "{context.deviceInfo}",
+                "connectionType": "{context.connectionType}",
+                "libVersion": "{context.libVersion}"
+            },
+            "session_stop": {
+                "metrics": "{context.metrics}"
+            },
+            "entities": {
+                "cdn": "{data.detectedCDN}",
+                "rendition": "{context.renditionChangeComposed}",
+                "title": "{data.contentVideoTitle}",
+                "program": "Program Name",
+                "subtitles": "en,fr",
+                "language": "en",
+                "nodeHost": "",
+                "nodeType": "",
+                "contentLanguage": "en"
+            },
+            "start": {
+                "mediaResource": "{context.mediaResource}",
+                "live": "{data.isLive} ? true : false",
+                "pluginVersion": "6.5.13-AVPlayer-iOS",
+                "title": "{data.contentVideoTitle}",
+                "mediaDuration": "{context.inbuilt.duration}",
+                "player": "{data.playerName}",
+                "playerVersion": "{data.playerVersion}",
+                "resource": "{data.resolvedContentURLString}",
+                "deviceUUID": "",
+                "username": "",
+                "playrate": "1",
+                "userType": "",
+                "transactionCode": "",
+                "parsedResource": "",
+                "properties": "",
+                "contentId": "{context.mediaId}",
+                "assetId": "",
+                "drm": "{data.isFairplayProtected}",
+                "videoCodec": "",
+                "audioCodec": "",
+                "codecSettings": "",
+                "codecProfile": "",
+                "containerFormat": "",
+                "contractedResolution": "",
+                "rendition": "",
+                "saga": "",
+                "program": "{data.isLive} ? {context.liveVideoTitle} : {data.contentVideoTitle}",
+                "tvshow": "{context.seriesTitle}",
+                "season": "",
+                "titleEpisode": "{context.episodeTitle}",
+                "channel": "",
+                "imdbID": "",
+                "gracenoteID": "",
+                "genre": "",
+                "language": "",
+                "subtitles": "",
+                "cost": "",
+                "price": "",
+                "contentType": "",
+                "playbackType": "",
+                "cdn": "{data.detectedCDN}",
+                "isp": "",
+                "ip": "",
+                "connectionType": "",
+                "deviceInfo": "{context.deviceInfo}",
+                "appName": "{context.appName}",
+                "appReleaseVersion": "",
+                "referer": "",
+                "streamingProtocol": "",
+                "obfuscateIp": "",
+                "p2pStreaming": "",
+                "p2pEnabled": "",
+                "nodeHost": "",
+                "nodeType": "",
+                "adsExpected": "",
+                "adsBlocked": "",
+                "package": "",
+                "libVersion": ""
+            },
+            "ping": {
+                "metrics": "{context.metrics}"
+            },
+            "error": {
+                "live": "{data.isLive} ? true : false",
+                "errorCode": "{data.cvpErrorCode}",
+                "errorMetadata": "{data.errorName}",
+                "msg": "{data.errorMessage}",
+                "title": "{data.isLive} ? {data.liveVideoTitle} : {data.videoTitle}",
+                "pluginVersion": "6.5.13-AVPlayer-iOS",
+                "mediaDuration": "{data.duration}",
+                "player": "{data.playerName}"
+            },
+            "adManifest" : {
+                "givenBreaks": "{data.adModel.totalAdsInPod}",
+                "expectedBreaks": "{data.adModel.totalAdsInPod}"
+            },
+            "adBreakStart": {
+                "breakNumber": "{data.adModel.adPositionInPod}",
+                "title": "{data.contentVideoTitle}",
+                "givenAds": "{data.adModel.totalAdsInPod}",
+                "expectedAds": "{data.adModel.totalAdsInPod}"
+            },
+            "adBreakStop": {
+                "breakNumber": "{data.adModel.adPositionInPod}"
+            },
+            "adStart": {
+                "adNumber": "{data.adModel.adPositionInPod}",
+                "adResource": "{data.adModel.adURLString}",
+                "adCampaign": "{context.adCampaign}",
+                "audio": "{context.audio}",
+                "fullscreen": "{context.isFullscreen}",
+                "breakNumber": "{data.adModel.adPositionInPod}",
+                "title": "{data.contentVideoTitle}",
+                "adTitle": "{data.adModel.adTitle}",
+                "skippable": "{data.adModel.adIsSkippable}",
+                "adCreativeId": "{data.adModel.adCreativeId}",
+                "adProvider": "{data.adModel.adSystem}",
+                "param1": "{context.param1}",
+                "param2": "{context.param2}",
+                "param3": "{context.param3}",
+                "param4": "{context.param4}",
+                "param5": "{context.param5}",
+                "param6": "{context.param6}",
+                "param7": "{context.param7}",
+                "param8": "{context.param8}",
+                "param9": "{context.param9}",
+                "param10": "{context.param10}"
+            },
+            "customData": {
+                "param1": "{context.userStatus}",
+                "param2": "{context.appName}",
+                "param3": "{context.userCountry}",
+                "param4": "{context.appName} {data.appVersion}",
+                "param5": "{context.brand}",
+                "param6": "{context.mediaId}",
+                "param7": "{data.isLive} ? Live : VOD",
+                "param8": "{context.connectionType}",
+                "param9": "{context.drmEnabled}",
+                "param10": "{context.drmType}",
+                "param11": "{context.episodeTitle}",
+                "param12": "{context.isEpisode}",
+                "param13": "{context.partner}",
+                "param14": "{context.playerVersion}",
+                "param15": "{context.seriesTitle}",
+                "param16": "{context.showSeriesId}",
+                "param17": "{context.streamId}",
+                "param18": "{context.videoProperties}",
+                "param19": "{context.screenSize}"
+            },
+            "bufferEvent": {
+                "adNumber": "{data.adModel.adPositionInPod}"
+            },
+            "adBufferEvent": {
+                "adNumber": "{data.adModel.adPositionInPod}"
+            },
+            "adJoin": {
+                "adNumber": "{data.adModel.adPositionInPod}"
+            },
+            "adQuartile": {
+                "breakNumber": "{data.adModel.adPositionInPod}",
+                "adNumber": "{data.adModel.adPositionInPod}"
+            },
+            "adPause": {
+                "breakNumber": "{data.adModel.adPositionInPod}",
+                "adNumber": "{data.adModel.adPositionInPod}"
+            },
+            "adResume": {
+                "breakNumber": "{data.adModel.adPositionInPod}",
+                "adNumber": "{data.adModel.adPositionInPod}"
+            },
+            "adBuffer": {
+            },
+            "adClick": {
+                "breakNumber": "{data.adModel.adPositionInPod}",
+                "adNumber": "{data.adModel.adPositionInPod}",
+                "adUrl": "{data.adModel.adURLString}"
+            },
+            "adStop": {
+                "breakNumber": "{data.adModel.adPositionInPod}",
+                "adNumber": "{data.adModel.adPositionInPod}",
+                "skipped": "{data.adModel.adSkipped}"
+            },
+            "adError": {
+                "position": "{data.adBreakTypeKey}",
+                "adNumber": "{data.adNum}",
+                "errorCode": "{data.errorCode}",
+                "player": "{data.playerName}",
+                "msg": "{data.errorMessage}",
+                "errorMetadata": "{data.errorName}",
+                "errorSeverity": "",
+                "playhead": "{context.playhead}",
+                "adPlayhead": "{data.adPlayhead}"
+            },
+            "dataType": {
+                "debugLogging": "boolean",
+                "sendUndefined": "boolean",
+                "sessionInterval": "int"
+            }
+        }
+    }
+}
