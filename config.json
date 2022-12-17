@@ -52,7 +52,7 @@
                 "live": "{data.isLive} ? true : false",
                 "pluginVersion": "6.7.33-ExoPlayer-Android",
                 "title": "{data.mediaTitle}",
-                "mediaDuration": "{context.duration}",
+                "mediaDuration": "{context.mediaDuration}",
                 "player": "{data.playerName}",
                 "playerVersion": "{data.playerVersion}",
                 "resource": "{data.mediaUrl}",
@@ -117,7 +117,7 @@
                 "msg": "{data.errorMessage}",
                 "title": "{data.isLive} ? {context.liveVideoTitle} : {data.mediaTitle}",
                 "pluginVersion": "6.7.33-ExoPlayer-Android",
-                "mediaDuration": "{data.duration}",
+                "mediaDuration": "{data.mediaDuration}",
                 "player": "{data.playerName}"
             },
             "adManifest" : {
