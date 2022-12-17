@@ -37,9 +37,9 @@
                 "metrics": "{context.metrics}"
             },
             "entities": {
-                "cdn": "{data.detectedCDN}",
+                "cdn": "{data.cdn}",
                 "rendition": "{context.renditionChangeComposed}",
-                "title": "{data.contentVideoTitle}",
+                "title": "{data.mediaTitle}",
                 "program": "Program Name",
                 "subtitles": "en,fr",
                 "language": "en",
@@ -50,12 +50,12 @@
             "start": {
                 "mediaResource": "{context.mediaResource}",
                 "live": "{data.isLive} ? true : false",
-                "pluginVersion": "6.5.13-AVPlayer-iOS",
-                "title": "{data.contentVideoTitle}",
-                "mediaDuration": "{data.mediaDuration}",
+                "pluginVersion": "6.7.33-ExoPlayer-Android",
+                "title": "{data.mediaTitle}",
+                "mediaDuration": "{context.duration}",
                 "player": "{data.playerName}",
                 "playerVersion": "{data.playerVersion}",
-                "resource": "{data.resolvedContentURLString}",
+                "resource": "{data.mediaUrl}",
                 "deviceUUID": "",
                 "username": "",
                 "playrate": "1",
@@ -65,7 +65,7 @@
                 "properties": "",
                 "contentId": "{context.mediaId}",
                 "assetId": "",
-                "drm": "{data.isFairplayProtected}",
+                "drm": "{data.drmEnabled}",
                 "videoCodec": "",
                 "audioCodec": "",
                 "codecSettings": "",
@@ -74,7 +74,7 @@
                 "contractedResolution": "",
                 "rendition": "",
                 "saga": "",
-                "program": "{data.isLive} ? {context.liveVideoTitle} : {data.contentVideoTitle}",
+                "program": "{data.isLive} ? {context.liveVideoTitle} : {data.mediaTitle}",
                 "tvshow": "{context.seriesTitle}",
                 "season": "",
                 "titleEpisode": "{context.episodeTitle}",
@@ -88,7 +88,7 @@
                 "price": "",
                 "contentType": "",
                 "playbackType": "",
-                "cdn": "{data.detectedCDN}",
+                "cdn": "{data.cdn}",
                 "isp": "",
                 "ip": "",
                 "connectionType": "",
@@ -112,38 +112,38 @@
             },
             "error": {
                 "live": "{data.isLive} ? true : false",
-                "errorCode": "{data.cvpErrorCode}",
+                "errorCode": "{data.errorCode}",
                 "errorMetadata": "{data.errorName}",
                 "msg": "{data.errorMessage}",
-                "title": "{data.isLive} ? {data.liveVideoTitle} : {data.videoTitle}",
-                "pluginVersion": "6.5.13-AVPlayer-iOS",
+                "title": "{data.isLive} ? {context.liveVideoTitle} : {data.mediaTitle}",
+                "pluginVersion": "6.7.33-ExoPlayer-Android",
                 "mediaDuration": "{data.duration}",
                 "player": "{data.playerName}"
             },
             "adManifest" : {
-                "givenBreaks": "{data.totalAdsInPod}",
-                "expectedBreaks": "{data.totalAdsInPod}"
+                "givenBreaks": "{data.adBreakCount}",
+                "expectedBreaks": "{data.adBreakCount}"
             },
             "adBreakStart": {
                 "breakNumber": "{data.adPodPosition}",
-                "title": "{data.adTitle}",
-                "givenAds": "{data.totalAdsInPod}",
-                "expectedAds": "{data.totalAdsInPod}"
+                "title": "{data.mediaTitle}",
+                "givenAds": "{data.adCount}",
+                "expectedAds": "{data.adCount}"
             },
             "adBreakStop": {
                 "breakNumber": "{data.adPodPosition}"
             },
             "adStart": {
                 "adNumber": "{data.adPositionInPod}",
-                "adResource": "{data.adURLString}",
+                "adResource": "{data.adUrl}",
                 "adCampaign": "{context.adCampaign}",
                 "audio": "{context.audio}",
                 "fullscreen": "{context.isFullscreen}",
                 "breakNumber": "{data.adPodPosition}",
-                "title": "{data.contentVideoTitle}",
+                "title": "{data.mediaTitle}",
                 "adTitle": "{data.adTitle}",
                 "skippable": "{data.adIsSkippable}",
-                "adCreativeId": "{data.adCreativeId}",
+                "adCreativeId": "{data.adId}",
                 "adProvider": "{data.adSystem}",
                 "param1": "{context.param1}",
                 "param2": "{context.param2}",
@@ -203,7 +203,7 @@
             "adClick": {
                 "breakNumber": "{data.adPodPosition}",
                 "adNumber": "{data.adPositionInPod}",
-                "adUrl": "{data.adURLString}"
+                "adUrl": "{data.adUrl}"
             },
             "adStop": {
                 "breakNumber": "{data.adPodPosition}",
@@ -218,7 +218,7 @@
                 "msg": "{data.errorMessage}",
                 "errorMetadata": "{data.errorName}",
                 "errorSeverity": "",
-                "playhead": "{context.playhead}",
+                "playhead": "{data.playhead}",
                 "adPlayhead": "{data.adPlayhead}"
             },
             "dataType": {
